@@ -6,10 +6,6 @@ namespace Middlewares.Middleware
 {
     public class ExceptionHandlingMiddleware : IMiddleware
     {
-        public ExceptionHandlingMiddleware()
-        {
-        }
-
         private static Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
             context.Response.ContentType = "application/json";
