@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="74f1873ac007438591b99fd5d9e90899" Name="Diagram1">
+        <EntityTypeShape EntityType="GathrioModel.AspNetRoleClaim" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GathrioModel.AspNetRole" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GathrioModel.AspNetUserClaim" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GathrioModel.AspNetUserLogin" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GathrioModel.AspNetUser" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="GathrioModel.AspNetUserToken" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GathrioModel.Badge" Width="1.5" PointX="6" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GathrioModel.Event" Width="1.5" PointX="2.125" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GathrioModel.GroupMembership" Width="1.5" PointX="6" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GathrioModel.Group" Width="1.5" PointX="4.5" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GathrioModel.UserBadge" Width="1.5" PointX="8.25" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="GathrioModel.FK_AspNetRoleClaims_AspNetRoles_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="GathrioModel.FK_AspNetRoles_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="GathrioModel.FK_AspNetUserClaims_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="GathrioModel.FK_AspNetUserLogins_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="GathrioModel.FK_AspNetUserTokens_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="GathrioModel.FK_GroupMemberships_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="GathrioModel.FK_UserBadge_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="GathrioModel.FK_UserBadge_Badge_BadgeId" ManuallyRouted="false" />
+        <AssociationConnector Association="GathrioModel.FK_GroupMemberships_Groups_GroupId" ManuallyRouted="false" />
+        <AssociationConnector Association="GathrioModel.FK_UserBadge_GroupMemberships_GroupMembershipId" ManuallyRouted="false" />
+        <AssociationConnector Association="GathrioModel.AspNetUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="GathrioModel.EventGroup" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

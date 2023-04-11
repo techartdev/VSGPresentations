@@ -14,7 +14,9 @@ namespace Presentations
         {
             string connectionString = "Connection String";
             using SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open(); 
 
+            
             IEnumerable<User> users = connection.Query<User>("SELECT FirstName, LastName FROM Users");
             foreach (User user in users)
             {

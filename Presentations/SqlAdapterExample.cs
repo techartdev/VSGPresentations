@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,16 +10,19 @@ namespace Presentations
 {
     public class SqlAdapterExample
     {
-        public void SelectStatement()
+        public void SelectStatement(string searchStr)
         {
             string connectionString = "Connection String";
             using SqlConnection connection = new SqlConnection(connectionString);
 
             connection.Open();
 
-            string sql = "SELECT FirstName, LastName FROM Users";
+            SqlParameter searchParam = new SqlParameter("searchStr", searchStr);
+            string sql = $"SELECT FirstName, LastName FROM Users where FirstName like @searchStr";
 
             using SqlCommand command = new SqlCommand(sql, connection);
+            command.Parameters.Add(searchParam);
+
             using SqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
